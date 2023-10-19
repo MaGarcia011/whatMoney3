@@ -37,7 +37,8 @@ formRegistro.addEventListener('submit', async (e) => {
     });
     const response = await request.json();
     if (response.msg == 'Registro guardado con exito') {
-      window.location.href = '/login.html';
+      localStorage.setItem('email', emailRegistro);
+      window.location.href = '/payment.html';
     }else{
       alert(response.msg);
       location.reload();
