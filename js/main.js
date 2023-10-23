@@ -4,7 +4,8 @@ const inputEmail = document.querySelector('#correo');
 const inputPassword = document.querySelector('#contrasena');
 const loginButtons = document.querySelectorAll('#login-button');
 const logoutButtons = document.querySelectorAll("#logout-button");
-
+let response;
+let errorMessage;
 if (window.location.pathname.includes('login.html')) {
   formLogin.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -25,8 +26,20 @@ if (window.location.pathname.includes('login.html')) {
         },
         body: JSON.stringify(data),
       });
-      const response = await request.json();
-      console.log(response);
+      if (request.ok) {
+        response = await request.json();
+        console.log(response);
+        document.getElementById('error-message').style.display = 'none';
+      } else {
+        console.error("error de autenticación")
+        errorMessage = document.getElementById('error-message');
+        errorMessage.style.display = 'block';
+      }
+
+      setTimeout(() => {
+        errorMessage.style.display = 'none';
+      }, 5000); // 5000 ms = 5 segundos
+
       //save the response data in the local storage (emailUser idUser nameUser token)
       localStorage.setItem('emailUser', response.emailUser);
       localStorage.setItem('idUser', response.idUser);
@@ -46,7 +59,6 @@ if (window.location.pathname.includes("about.html")) {
   }
 }
 
-// Validate if user is logged
 document.addEventListener('DOMContentLoaded', () => {
   if (localStorage.getItem('token')) {
     loginButtons.forEach((loginButton) => {
@@ -70,3 +82,4 @@ function logoutSession() {
     });
   })
 }
+

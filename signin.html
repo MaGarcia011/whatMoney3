@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href="favicon.png">
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap5" />
+
+  <link rel="stylesheet" href="css/signin.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
+  <title>WhatMoney</title>
+</head>
+
+<body>
+  <div class="hero overlay">
+    <img src="images/blob.svg" alt="" class="img-fluid blob">
+    <div class="container">
+      <form class="signin-form" enctype="multipart/form-data">
+        <div class="superior">
+          <h2 class="title">Regístrate!</h2>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="">Apellido Paterno</label>
+              <input  type="text" id="apellidoP" name="apellidoP" placeholder="Apellido Paterno" required>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="">Apellido Materno</label>
+              <input type="text" id="apellidoM" name="apellidoM" placeholder="Apellido Materno" required>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="">Fecha de nacimiento</label>
+          <input type="date" id="fechaNac" name="fechaNac" placeholder="Fecha de nacimiento">
+        </div>
+        <div class="form-group">
+          <label for="">Foto</label>
+          <input class="form-control" type="file" id="foto" name="foto" accept="image/*" required>
+        </div>
+        <div class="form-group">
+          <label for="correo">Correo Electrónico</label>
+          <input type="email" id="correo" name="correo" placeholder="Correo Electrónico" required>
+        </div>
+        <div class="form-group">
+          <label for="contrasena">Contraseña</label>
+          <input type="password" id="password" name="contrasena" placeholder="Contraseña" required>
+        </div>
+        <div class="botones d-flex justify-content-center">
+          <button class="login-button" type="submit">Registrarse</button>
+        </div>
+        <a class="return-link" href="index.html">Volver a la página principal</a>
+      </form>
+    </div>
+    <script src="./js/main.js" type="module"></script>
+    <script src="./js/signin.js"></script>
+</body>
+
+</html>
