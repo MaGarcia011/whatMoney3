@@ -21,10 +21,11 @@ body {
 
 .container {
     background-color: rgba(255, 255, 255, 0.7); 
-    padding: 40px 60px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
+    margin-top: 10px;
 }
 
 .signin-form {
@@ -87,23 +88,6 @@ button:hover {
 .return-link:hover {
     text-decoration: underline; 
 }
-
-.input-group {
-    display: flex;
-  }
-  
-  .input-group input {
-    flex: 1;
-    margin-right: 10px;
-  }
-    
-  .labelss{
-    display: flex;
-  }
-
-  .labelss .apellido{
-    margin-left: 6rem;
-  }
 
   .botones 
   {

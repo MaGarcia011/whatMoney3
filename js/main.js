@@ -46,7 +46,7 @@ if (window.location.pathname.includes('login.html')) {
       localStorage.setItem('nameUser', response.nameUser);
       localStorage.setItem('token', response.token);
       //redirect to index.html
-      location.href = 'index.html';
+      location.href = 'RegistroGastos.html';
     } catch (error) {
       console.log(error);
     }

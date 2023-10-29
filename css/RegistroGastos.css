@@ -1,0 +1,68 @@
+.monto {
+    text-align: center;
+    font-size: 70px;
+    /* Establece el tamaño de fuente deseado */
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    gap: 8rem;
+}
+
+.ingresos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cantidad {
+    border-radius: 15px;
+    border: none;
+    text-align: center;
+    width: 200px;
+    height: 30px;
+}
+
+.cantidad:focus {
+    outline: none;
+}
+
+.categoria {
+    border-radius: 15px;
+    border: none;
+    text-align: center;
+    width: 200px;
+    height: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.categoria:focus {
+    outline: none;
+}   
+
+.detalle{
+    border: 1px solid white;
+    width: 200px;
+    border-radius: 15px;
+    text-align: start;
+    height: 80px;
+    
+}
+
+.egresos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
