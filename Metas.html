@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WhatMoney - Balance</title>
+    <title>WhatMoney - Metas</title>
     <link rel="shortcut icon" href="images/What-removebg-preview.png">
-    <link rel="stylesheet" href="css/RegistroGastos.css">
+    <link rel="stylesheet" href="css/hhmr.css">
     <meta name="keywords" content="bootstrap, bootstrap5" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -73,25 +73,43 @@
         </div>
     </nav>
 
-    <div class="hero overlay">
-        <h1 class="heading text-white mb-3" data-aos="fade-up" style="margin-top: 100px; margin-left: 100px;">Bienvenido</h1>
-        <div class="info">
-            <div class="ingresos">
-                <h2 class="heading text-white">+ Ingresos +</h2>
-                <input class="cantidad" type="number" placeholder="Cantidad">
-                <input class="categoria" type="text" placeholder="Categoría">
-                <div class="detalle text-white">Detalle</div>
-            </div>
-            <div class="monto text-white" id="user-monto">
-                $2000
-            </div>
-            <div class="egresos">
-                <h2 class="heading text-white">- Egresos -</h2>
-                <input class="cantidad" type="number" placeholder="Cantidad">
-                <input class="categoria" type="text" placeholder="Categoría">
-                <div class="detalle text-white">Detalle</div>
-            </div>
+    <div class="hero overlay text-white">
+        <h1 class="heading text-white mb-3" data-aos="fade-up" style="margin-top: 100px; margin-left: 100px;">Crea nuevas metas:</h1>
+        <hr>
+    
+        <div class="button-container">
+            <a href="Metas.html" class="action-button">Nueva meta</a>
+            <a href="MetasModif.html"  class="action-button">Modificar</a>
+            <a href="MetasMostrar.html"  class="action-button">Mostrar</a>
         </div>
+    
+        <form class="goal-form" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+            </div>
+            <div class="form-group">
+                <label for="cantidad">Cantidad de dinero:</label>
+                <input type="text" id="cantidad" name="cantidad">
+            </div>
+            <div class="form-group">
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha">
+            </div>
+            <div class="form-group">
+                <label for="categoria">Categoría:</label>
+                <select id="categoria" name="categoria">
+                    <option value="opcion1">Opción 1</option>
+                    <option value="opcion2">Opción 2</option>
+                    <option value="opcion3">Opción 3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" rows="4"></textarea>
+            </div>
+            <button class="save-button">Guardar</button>
+        </form>
     </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
