@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WhatMoney - Historial de Movimientos</title>
+    <title>WhatMoney</title>
     <link rel="shortcut icon" href="images/What-removebg-preview.png">
     <link rel="stylesheet" href="css/hhmr.css">
     <meta name="keywords" content="bootstrap, bootstrap5" />
@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/glightbox.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/flatpickr.min.css">
+    <link rel="stylesheet" href="css/movimientos.css">
 </head>
 
 <body>
@@ -80,19 +81,31 @@
             <div class="superior">
             </div>
             <div class="row">
-                <div class="col-9">
+                <div class="camposSelect ">
                     <div class="form-group">
                         <label class="text-white" for="fechaNac">Fecha:</label>
                         <input type="date" id="fechaNac" name="fechaNac" placeholder="Fecha de nacimiento" class="date-input">
                     </div>
                     <div class="form-group">
                         <label class="text-white" for="fechaNac">Categoría:</label>
-                        <input type="select" id="categoria" name="categiria" placeholder="Categoria" class="select-input">
-                        <option></option>
+                        <select name="categoria" id="categoria">
+                            <option value="0">Seleccione una categoría</option>
+                            <option value="1">Alimentación</option>
+                            <option value="2">Transporte</option>
+                            <option value="3">Salud</option>
+                            <option value="4">Educación</option>
+                            <option value="5">Servicios</option>
+                            <option value="6">Entretenimiento</option>
+                            <option value="7">Otros</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label class="text-white" for="fechaNac">Tipo:</label>
-                        <input type="select" id="tipoingre" name="tipoingre" placeholder="tipoingre" class="select-input">
+                        <select name="tipoingre" id="tipoingre">
+                            <option value="0">Seleccione un tipo</option>
+                            <option value="1">Ingreso</option>
+                            <option value="2">Egreso</option>
+                        </select>
                     </div>
                 </div>
             </div>
