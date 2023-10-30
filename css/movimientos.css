@@ -1,0 +1,16 @@
+.camposSelect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.camposSelect input {
+    border: none;
+    border-radius: 5px;
+
+}
+
+.camposSelect input:focus {
+    outline: none;
+}   
