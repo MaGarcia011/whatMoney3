@@ -71,6 +71,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const welcomeMessage = document.getElementById('welcome-message');
+  const nameUser = localStorage.getItem('nameUser');
+
+  if (nameUser) {
+    welcomeMessage.textContent = `Bienvenido ${nameUser}`;
+  }
+});
+
 function logoutSession() {
   logoutButtons.forEach(logoutButton => {
     logoutButton.addEventListener('click', () => {
