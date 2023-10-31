@@ -89,6 +89,7 @@ function logoutSession() {
       localStorage.removeItem('token');
       location.href = 'index.html';
     });
+    
   })
 }
 

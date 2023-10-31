@@ -61,6 +61,10 @@
     
 }
 
+.detalle:focus {
+    outline: none;
+}
+
 .egresos {
     display: flex;
     flex-direction: column;
