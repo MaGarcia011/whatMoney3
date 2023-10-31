@@ -78,30 +78,36 @@
         <div class="info">
             <div class="ingresos">
                 <h2 class="heading text-white">+ Ingresos +</h2>
-                <input class="cantidad" type="number" placeholder="Cantidad">
-                <select name="categoria" id="categoria" class="categoria">
+                <input id="Ingreso_Cantidad" type="number" placeholder="Cantidad">
+                <select id="Ingreso_Categoria" name="categoria" id="categoria" class="categoria">
                     <option value="salario">Categoría</option>
                     <option value="sueldo">Sueldo</option>
                     <option value="prestamo">Préstamo</option>
                     <option value="regalo">Regalo</option>
                     <option value="otro">Otro</option>
                 </select>
-                <textarea class="detalle" placeholder="Detalle" rows="3"></textarea>
+                <textarea id="Ingreso_Detalle" class="detalle" placeholder="Detalle" rows="3"></textarea>
+                <div class="button-container">
+                    <button id="btn-ingreso">Agregar ingreso</button>
+                </div>
             </div>
             <div class="monto text-white" id="user-monto">
-                $2000
+                
             </div>
             <div class="egresos">
                 <h2 class="heading text-white">- Egresos -</h2>
-                <input class="cantidad" type="number" placeholder="Cantidad">
-                <select name="categoria" id="categoria" class="categoria">
+                <input id="Egreso_Cantidad" class="cantidad" type="number" placeholder="Cantidad">
+                <select id="Egreso_Categoria" name="categoria" id="categoria" class="categoria">
                     <option value="salario">Categoría</option>
                     <option value="sueldo">Sueldo</option>
                     <option value="prestamo">Préstamo</option>
                     <option value="regalo">Regalo</option>
                     <option value="otro">Otro</option>
                 </select>
-                <textarea class="detalle" placeholder="Detalle" rows="3"></textarea>
+                <textarea id="Egreso_Detalle" class="detalle" placeholder="Detalle" rows="3"></textarea>
+                <div class="button-container">
+                    <button id="btn-egreso">Agregar egreso</button>
+                </div>
             </div>
         </div>
     </div>
@@ -115,6 +121,7 @@
     <script src="js/counter.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/services.js"></script>
 
 </body>
 
