@@ -3,7 +3,7 @@ const transactionTable = document.getElementById('transaction-tableTwo');
 
 document.addEventListener('DOMContentLoaded', () => {
     if (!localStorage.getItem("token")) {
-        location.href = "HistorialBalance.html";
+        location.href = "index.html";
     }
     getTransactions();
     console.log("entre");
