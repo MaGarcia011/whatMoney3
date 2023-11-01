@@ -3,7 +3,7 @@ const transactionTable = document.getElementById('transaction-table');
 
 document.addEventListener('DOMContentLoaded', () => {
     if (!localStorage.getItem("token")) {
-        location.href = "HistorialMovimientos.html";
+        location.href = "index.html";
     }
     getTransactions();
     console.log("entre");
