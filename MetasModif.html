@@ -86,33 +86,61 @@
         <form class="goal-form" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="categoria">Nombre:</label>
-                <select id="categoria" name="categoria">
-                    <option value="opcion1">Opción 1</option>
-                    <option value="opcion2">Opción 2</option>
-                    <option value="opcion3">Opción 3</option>
+                <select id="metanombre" name="nombre">
+
                 </select>
             </div>
             <div class="form-group">
                 <label for="cantidad">Cantidad de dinero:</label>
-                <input type="text" id="cantidad" name="cantidad">
+                <input id="metacant" type="text" id="cantidad" name="cantidad">
             </div>
             <div class="form-group">
                 <label for="fecha">Fecha:</label>
-                <input type="date" id="fecha" name="fecha">
+                <input id="metafecha" type="date" id="fecha" name="fecha">
             </div>
             <div class="form-group">
                 <label for="categoria">Categoría:</label>
-                <select id="categoria" name="categoria">
-                    <option value="opcion1">Opción 1</option>
-                    <option value="opcion2">Opción 2</option>
-                    <option value="opcion3">Opción 3</option>
+                <select id="metacategoria" name="categoria">
+                    <option value="Salario">Salario</option>
+                    <option value="Honorarios">Honorarios</option>
+                    <option value="Alquiler de propiedades">Alquiler de propiedades</option>
+                    <option value="Intereses">Intereses</option>
+                    <option value="Dividendos">Dividendos</option>
+                    <option value="Venta de activos">Venta de activos</option>
+                    <option value="Préstamos devueltos">Préstamos devueltos</option>
+                    <option value="Regalías">Regalías</option>
+                    <option value="Ingresos por negocios secundarios">Ingresos por negocios secundarios</option>
+                    <option value="Ingresos por freelance">Ingresos por freelance</option>
+                    <option value="Ingresos por inversión">Ingresos por inversión</option>
+                    <option value="Subsidios">Subsidios</option>
+                    <option value="Reembolsos">Reembolsos</option>
+                    <option value="Vivienda">Vivienda</option>
+                    <option value="Alimentación">Alimentación</option>
+                    <option value="Transporte">Transporte</option>
+                    <option value="Salud">Salud</option>
+                    <option value="Educación">Educación</option>
+                    <option value="Entretenimiento">Entretenimiento</option>
+                    <option value="Ropa">Ropa</option>
+                    <option value="Cuidado personal">Cuidado personal</option>
+                    <option value="Deudas">Deudas</option>
+                    <option value="Seguros">Seguros</option>
+                    <option value="Impuestos">Impuestos</option>
+                    <option value="Ahorros">Ahorros</option>
+                    <option value="Donaciones">Donaciones</option>
+                    <option value="Mascotas">Mascotas</option>
+                    <option value="Viajes">Viajes</option>
+                    <option value="Mantenimiento de vehículo">Mantenimiento de vehículo</option>
+                    <option value="Imprevistos">Imprevistos</option>
+                    <option value="Suministros para el hogar">Suministros para el hogar</option>
+                    <option value="Servicios públicos">Servicios públicos</option>
+                    <option value="Tecnología y telecomunicaciones">Tecnología y telecomunicaciones</option>
                 </select>
             </div>
-            <div class="form-group">
+            <div class="form-group descripcion">
                 <label for="descripcion">Descripción:</label>
-                <textarea id="descripcion" name="descripcion" rows="4"></textarea>
+                <textarea id="metadescrip" name="descripcion" rows="4"></textarea>
             </div>
-            <button class="save-button">Guardar</button>
+            <button id="btn-metaadd" class="save-button">Guardar</button>
         </form>
     </div>
 
@@ -125,6 +153,7 @@
     <script src="js/counter.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/metasmod.js"></script>
 
 </body>
 
