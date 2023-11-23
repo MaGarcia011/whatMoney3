@@ -6,9 +6,14 @@ const inputFoto = document.querySelector('#foto');
 const inputFecha = document.querySelector('#fechaNac');
 const inputEmailRegistro = document.querySelector('#correo'); // Campo de correo para registro
 const inputPasswordRegistro = document.querySelector('#password'); // Campo de contraseña para registro
+const yearActual = new Date().getFullYear();
+
 
 formRegistro.addEventListener('submit', async (e) => {
   e.preventDefault();
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
   const formData = new FormData();
   const nombre = inputNombre.value;
   const apellidoP = inputApellidoP.value;
@@ -20,6 +25,23 @@ formRegistro.addEventListener('submit', async (e) => {
 
   if ([nombre, apellidoP, apellidoM, profile_image, fecha, emailRegistro, passwordRegistro].includes('')) {
     return alert('Todos los campos son obligatorios');
+  }
+
+  if (!emailRegex.test(emailRegistro)) {
+    return alert('Formato de correo electrónico no válido');
+  }
+
+  // Validar la contraseña
+  const passwordRegex = /^(?=.*[a-zA-Z]{6,})(?=.*\d{2,})(?=.*[!@#$%^&*()_+])[A-Za-z\d!@#$%^&*()_+]+$/;
+
+  if (!passwordRegex.test(passwordRegistro)) {
+    return alert('La contraseña debe tener al menos 6 letras, 2 números y un carácter especial');
+  }
+
+  const selectedYear = new Date(fecha).getFullYear();
+
+  if (selectedYear > yearActual) {
+    return alert('No se permite seleccionar un año posterior al actual');
   }
 
   formData.append('nombre', nombre);
@@ -39,7 +61,8 @@ formRegistro.addEventListener('submit', async (e) => {
     if (response.msg == 'Registro guardado con exito') {
       localStorage.setItem('email', emailRegistro);
       window.location.href = '/payment.html';
-    }else{
+      document.getElementById("signin-form").reset();
+    } else {
       alert(response.msg);
       location.reload();
     }
