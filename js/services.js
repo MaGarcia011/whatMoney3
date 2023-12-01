@@ -32,10 +32,76 @@ addIngreso.addEventListener('click', () => {
 
     console.log(cantidadIngreso, categoriaIngreso, detalleIngreso);
 
-    if (!cantidadIngreso && !categoriaIngreso && !detalleIngreso) {
-        return alert('Todos los campos son obligatorios');
+    if (!cantidadIngreso || !categoriaIngreso || !detalleIngreso) {
+        // Si falta al menos un campo, muestra la alerta de error
+        const alertError = document.createElement('div');
+        alertError.className = 'alert alert-danger';
+        alertError.role = 'alert';
+        alertError.innerText = 'Por favor, completa todos los campos';
+
+        // Agrega el elemento de alerta de error al cuerpo del documento
+        document.body.appendChild(alertError);
+
+        // Aplica estilos para centrar la alerta de error
+        alertError.style.position = 'fixed';
+        alertError.style.top = '50%';
+        alertError.style.left = '50%';
+        alertError.style.transform = 'translate(-50%, -50%)';
+
+        // Espera unos segundos y luego elimina la alerta de error
+        setTimeout(() => {
+            document.body.removeChild(alertError);
+        }, 4000); // 3000 milisegundos (3 segundos)
+
+        return; // Detiene la ejecución de la función si faltan campos
     }
-    alert('Ingreso agregado correctamente');
+
+    else if (cantidadIngreso <0 || cantidadIngreso > 100000) {
+        const alertError = document.createElement('div');
+        alertError.className = 'alert alert-danger';
+        alertError.role = 'alert';
+        alertError.innerText = 'Ingresa un valor menor a $100,000 y mayor a $0';
+
+        // Agrega el elemento de alerta de error al cuerpo del documento
+        document.body.appendChild(alertError);
+
+        // Aplica estilos para centrar la alerta de error
+        alertError.style.position = 'fixed';
+        alertError.style.top = '50%';
+        alertError.style.left = '50%';
+        alertError.style.transform = 'translate(-50%, -50%)';
+
+        // Espera unos segundos y luego elimina la alerta de error
+        setTimeout(() => {
+            document.body.removeChild(alertError);
+        }, 4000); // 3000 milisegundos (3 segundos)
+
+        return; // Detiene la ejecución de la función si faltan campos
+    }
+
+
+    const alertElement = document.createElement('div');
+    alertElement.className = 'alert alert-success';
+    alertElement.role = 'alert';
+    alertElement.innerText = 'Ingreso agregado correctamente';
+
+     // Agrega el elemento de alerta al cuerpo del documento
+     document.body.appendChild(alertElement);
+
+     // Aplica estilos para centrar la alerta
+     alertElement.style.position = 'fixed';
+     alertElement.style.top = '50%';
+     alertElement.style.left = '50%';
+     alertElement.style.transform = 'translate(-50%, -50%)';
+ 
+     // Espera unos segundos y luego elimina la alerta
+     setTimeout(() => {
+         document.body.removeChild(alertElement);
+     }, 3000); // 3000 milisegundos (3 segundos)
+     
+     // Resta el balance
+     restarBalance();
+
     addBalance();
     Ingreso_Cantidad.value = '';
     Ingreso_Categoria.value = '';
@@ -65,21 +131,90 @@ async function addBalance() {
 }
 
 addEngreso.addEventListener('click', () => {
-    const cantidadEgreso = Egreso_Cantidad.value
-    const categoriaEgreso = Egreso_Categoria.value
-    const detalleEgreso = Egreso_Detalle.value
+    const cantidadEgreso = Egreso_Cantidad.value;
+    const categoriaEgreso = Egreso_Categoria.value;
+    const detalleEgreso = Egreso_Detalle.value;
 
     console.log(cantidadEgreso, categoriaEgreso, detalleEgreso);
 
-    if (!cantidadEgreso && !categoriaEgreso && !detalleEgreso) {
-        return alert('Todos los campos son obligatorios');
+    if (!categoriaEgreso || !cantidadEgreso || !detalleEgreso) {
+        // Si falta al menos un campo, muestra la alerta de error
+        const alertError = document.createElement('div');
+        alertError.className = 'alert alert-danger';
+        alertError.role = 'alert';
+        alertError.innerText = 'Por favor, completa todos los campos';
+
+        // Agrega el elemento de alerta de error al cuerpo del documento
+        document.body.appendChild(alertError);
+
+        // Aplica estilos para centrar la alerta de error
+        alertError.style.position = 'fixed';
+        alertError.style.top = '50%';
+        alertError.style.left = '50%';
+        alertError.style.transform = 'translate(-50%, -50%)';
+
+        // Espera unos segundos y luego elimina la alerta de error
+        setTimeout(() => {
+            document.body.removeChild(alertError);
+        }, 4000); // 3000 milisegundos (3 segundos)
+
+        return; // Detiene la ejecución de la función si faltan campos
     }
-    alert('Egreso agregado correctamente');
+
+    else if (cantidadEgreso <0 || cantidadEgreso > 100000) {
+        const alertError = document.createElement('div');
+        alertError.className = 'alert alert-danger';
+        alertError.role = 'alert';
+        alertError.innerText = 'Ingresa un valor menor a $100,000 y mayor a $0';
+
+        // Agrega el elemento de alerta de error al cuerpo del documento
+        document.body.appendChild(alertError);
+
+        // Aplica estilos para centrar la alerta de error
+        alertError.style.position = 'fixed';
+        alertError.style.top = '50%';
+        alertError.style.left = '50%';
+        alertError.style.transform = 'translate(-50%, -50%)';
+
+        // Espera unos segundos y luego elimina la alerta de error
+        setTimeout(() => {
+            document.body.removeChild(alertError);
+        }, 4000); // 3000 milisegundos (3 segundos)
+
+        return; // Detiene la ejecución de la función si faltan campos
+    }
+
+    
+
+    // Crea dinámicamente un elemento de alerta Bootstrap
+    const alertElement = document.createElement('div');
+    alertElement.className = 'alert alert-success';
+    alertElement.role = 'alert';
+    alertElement.innerText = 'Egreso agregado correctamente';
+
+    // Agrega el elemento de alerta al cuerpo del documento
+    document.body.appendChild(alertElement);
+
+    // Aplica estilos para centrar la alerta
+    alertElement.style.position = 'fixed';
+    alertElement.style.top = '50%';
+    alertElement.style.left = '50%';
+    alertElement.style.transform = 'translate(-50%, -50%)';
+
+    // Espera unos segundos y luego elimina la alerta
+    setTimeout(() => {
+        document.body.removeChild(alertElement);
+    }, 3000); // 3000 milisegundos (3 segundos)
+    
+    // Resta el balance
     restarBalance();
+
+    // Limpia los valores del formulario
     Egreso_Cantidad.value = '';
     Egreso_Categoria.value = '';
     Egreso_Detalle.value = '';
-})
+});
+
 
 async function restarBalance() {
     const cantidadEgreso = Egreso_Cantidad.value.trim();

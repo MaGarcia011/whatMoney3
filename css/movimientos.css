@@ -14,3 +14,43 @@
 .camposSelect input:focus {
     outline: none;
 }   
+
+/* Estilos para el contenedor con scroll */
+.scroll-container {
+    max-height: 500px; /* Puedes ajustar esto según tus necesidades */
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+
+/* Estilos generales para la tabla */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Estilos para las celdas de encabezado */
+.data-table th {
+    background-color: #007BFF; /* Color de fondo del encabezado */
+    color: #fff; /* Color del texto del encabezado */
+    padding: 10px;
+    text-align: left;
+}
+
+/* Estilos alternados para filas de datos */
+.data-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Color de fondo para filas pares */
+}
+
+/* Estilos para las celdas de datos */
+.data-table td {
+    padding: 10px;
+}
+
+/* Estilos para la celda de cantidad */
+.data-table td:last-child {
+    font-weight: bold;
+    color: #151b16; /* Color específico para la celda de cantidad */
+}
