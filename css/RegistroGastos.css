@@ -70,3 +70,31 @@
     flex-direction: column;
     align-items: center;
 }
+
+
+/* Estilo personalizado para el botón Agregar egreso */
+#btn-egreso {
+    background-color: #007BFF; /* Color azul */
+    color: #fff; /* Texto blanco */
+    border: 1px solid #0056b3; /* Borde azul más oscuro */
+    box-shadow: 0 40px 20px rgba(0, 140, 255, 0.1), 0 0 10px rgba(29, 113, 202, 0.3); /* Sombra tridimensional más pronunciada */
+    transition: background-color 0.3s ease-in-out; /* Transición suave en el cambio de color de fondo */
+}
+
+/* Cambio de color de fondo al pasar el mouse */
+#btn-egreso:hover {
+    background-color: #0056b3; /* Cambio de color al azul más oscuro al pasar el mouse */
+}
+
+#btn-ingreso {
+    background-color: #007BFF; /* Color azul */
+    color: #fff; /* Texto blanco */
+    border: 1px solid #0056b3; /* Borde azul más oscuro */
+    box-shadow: 0 40px 20px rgba(0, 140, 255, 0.1), 0 0 10px rgba(29, 113, 202, 0.3); /* Sombra tridimensional más pronunciada */
+    transition: background-color 0.3s ease-in-out; /* Transición suave en el cambio de color de fondo */
+}
+
+/* Cambio de color de fondo al pasar el mouse */
+#btn-ingreso:hover {
+    background-color: #0056b3; /* Cambio de color al azul más oscuro al pasar el mouse */
+}

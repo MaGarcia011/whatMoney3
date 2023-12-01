@@ -77,32 +77,21 @@
     <div class="hero overlay text-white">
         <h1 class="heading text-white mb-3" data-aos="fade-up" style="margin-top: 100px; margin-left: 100px;">Accede al historial de balance:</h1>
         <hr>
-    
-        <!-- <form class="signin-form" enctype="multipart/form-data">
-            <div class="superior">
-            </div>
-            <div class="row">
-                <div class="camposSelect">
-                    <div class="form-group">
-                        <label class="text-white" for="fechaNac">Fecha:</label>
-                        <input type="date" id="fechaNac" name="fechaNac" placeholder="Fecha de nacimiento" class="date-input">
-                    </div>
-                </div>
-            </div>
-        </form> -->
-    
-        <table class="data-table text-black">
-            <thead>
-                <tr>
-                    <th>Fecha</th>
-                    <th>Hora</th>
-                    <th>Balance</th>
-                </tr>
-            </thead>
-            <tbody id="transaction-tableTwo" >
-                
-            </tbody>
-        </table>
+        <!-- Agrega un contenedor con scroll -->
+        <div class="scroll-container">
+            <table class="data-table text-black">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Balance</th>
+                    </tr>
+                </thead>
+                <tbody id="transaction-tableTwo">
+                    <!-- Aquí irán tus filas de datos -->
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
