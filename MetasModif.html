@@ -19,6 +19,9 @@
     <link rel="stylesheet" href="css/glightbox.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/flatpickr.min.css">
+    <link rel="stylesheet" href="css/metas.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.css">
 </head>
 
 <body>
@@ -74,7 +77,8 @@
     </nav>
 
     <div class="hero overlay text-white">
-        <h1 class="heading text-white mb-3" data-aos="fade-up" style="margin-top: 100px; margin-left: 100px;">Modifica metas:</h1>
+        <h1 class="heading text-white mb-3" data-aos="fade-up" style="margin-top: 100px; margin-left: 100px;">Modifica tus metas:</h1>
+        <p data-aos="fade-up">¿Ingresaste mal un valor al crear tu meta? No hay problema, puedes modificar tus metas, solo selecciona el nombre de tu meta. </p>
         <hr>
     
         <div class="button-container">
@@ -96,8 +100,7 @@
             </div>
             <div class="form-group" >
                 <label for="fecha">Fecha:</label>
-                <input id="metafecha" type="date" id="fecha" name="fecha">
-
+                <input type="text" id="metafecha" placeholder="Selecciona una fecha:" data-input>
             </div>
             <div class="form-group">
                 <label for="categoria">Categoría:</label>
@@ -144,6 +147,9 @@
             <button id="btn-metaadd" class="save-button" style="display: none">Guardar</button>
         </form>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/tiny-slider.js"></script>

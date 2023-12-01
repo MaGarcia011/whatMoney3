@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/glightbox.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/flatpickr.min.css">
+    <link rel="stylesheet" href="css/textos.css">
 </head>
 
 <body>
@@ -75,16 +76,25 @@
 
     <div class="hero overlay">
         <h1 class="heading text-white mb-3" id="welcome-message" data-aos="fade-up" style="margin-top: 100px; margin-left: 100px;"></h1>
+        <p data-aos="fade-up">Aqui podras agregar ingresos y egresos a tu balance, llena todos los campos y empieza a llevar tu control! </p>
         <div class="info">
             <div class="ingresos">
                 <h2 class="heading text-white">+ Ingresos +</h2>
                 <input id="Ingreso_Cantidad" type="number" class="cantidad" placeholder="Cantidad">
                 <select id="Ingreso_Categoria" name="categoria" id="categoria" class="categoria">
-                    <option value="">Categoría</option>
-                    <option value="sueldo">Sueldo</option>
-                    <option value="prestamo">Préstamo</option>
-                    <option value="regalo">Regalo</option>
-                    <option value="otro">Otro</option>
+                    <option value="Salario">Salario</option>
+                    <option value="Honorarios">Honorarios</option>
+                    <option value="Alquiler de propiedades">Alquiler de propiedades</option>
+                    <option value="Intereses">Intereses</option>
+                    <option value="Dividendos">Dividendos</option>
+                    <option value="Venta de activos">Venta de activos</option>
+                    <option value="Préstamos devueltos">Préstamos devueltos</option>
+                    <option value="Regalías">Regalías</option>
+                    <option value="Ingresos por negocios secundarios">Negocios secundarios</option>
+                    <option value="Ingresos por freelance">Ingresos por freelance</option>
+                    <option value="Ingresos por inversión">Ingresos por inversión</option>
+                    <option value="Subsidios">Subsidios</option>
+                    <option value="Reembolsos">Reembolsos</option>
                 </select>
                 <textarea id="Ingreso_Detalle" class="detalle" placeholder="Detalle" rows="3"></textarea>
                 <div class="button-container">
@@ -98,11 +108,26 @@
                 <h2 class="heading text-white">- Egresos -</h2>
                 <input id="Egreso_Cantidad" class="cantidad" type="number" placeholder="Cantidad">
                 <select id="Egreso_Categoria" name="categoria" id="categoria" class="categoria">
-                    <option value="salario">Categoría</option>
-                    <option value="sueldo">Sueldo</option>
-                    <option value="prestamo">Préstamo</option>
-                    <option value="regalo">Regalo</option>
-                    <option value="otro">Otro</option>
+                    <option value="Vivienda">Vivienda</option>
+                    <option value="Alimentación">Alimentación</option>
+                    <option value="Transporte">Transporte</option>
+                    <option value="Salud">Salud</option>
+                    <option value="Educación">Educación</option>
+                    <option value="Entretenimiento">Entretenimiento</option>
+                    <option value="Ropa">Ropa</option>
+                    <option value="Cuidado personal">Cuidado personal</option>
+                    <option value="Deudas">Deudas</option>
+                    <option value="Seguros">Seguros</option>
+                    <option value="Impuestos">Impuestos</option>
+                    <option value="Ahorros">Ahorros</option>
+                    <option value="Donaciones">Donaciones</option>
+                    <option value="Mascotas">Mascotas</option>
+                    <option value="Viajes">Viajes</option>
+                    <option value="Mantenimiento de vehículo">Mantenimiento de vehículo</option>
+                    <option value="Imprevistos">Imprevistos</option>
+                    <option value="Suministros para el hogar">Suministros para el hogar</option>
+                    <option value="Servicios públicos">Servicios públicos</option>
+                    <option value="Tecnología y telecomunicaciones">Tecnología y telecomunicaciones</option>
                 </select>
                 <textarea id="Egreso_Detalle" class="detalle" placeholder="Detalle" rows="3"></textarea>
                 <div class="button-container">

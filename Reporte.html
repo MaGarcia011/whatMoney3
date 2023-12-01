@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="css/glightbox.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/flatpickr.min.css">
+    <link rel="stylesheet" href="css/movimientos.css">
+    <link rel="stylesheet" href="css/textos.css">
 </head>
 
 <body>
@@ -75,7 +77,9 @@
 
     <div class="hero overlay text-white">
         <h1 class="heading text-white mb-3" data-aos="fade-up" style="margin-top: 100px; margin-left: 100px;">Accede a los reportes:</h1>
-        
+        <p data-aos="fade-up">Mira los reportes de tus progresos!</p>
+
+        <div class="scroll-container">
         <table class="data-table text-black">
             <thead>
                 <tr>
@@ -83,9 +87,16 @@
                 </tr>
             </thead>
             <tbody>
-                
+                <tr>
+                    <td>Solo da clic en el boton para generar tu primer reporte!</td>
+                </tr>
             </tbody>
         </table>
+    </div>
+
+    <div class="button-container">
+        <button id="btn-ingreso" class="btn btn-primary mt-3">Crear reporte</button>
+    </div> 
 
     </div>
 
@@ -98,6 +109,7 @@
     <script src="js/counter.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/reporte.js"></script>
 
 </body>
 
