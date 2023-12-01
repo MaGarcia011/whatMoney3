@@ -61,6 +61,9 @@ addIngreso.addEventListener('click', () => {
         alertError.className = 'alert alert-danger';
         alertError.role = 'alert';
         alertError.innerText = 'Ingresa un valor menor a $100,000 y mayor a $0';
+        Ingreso_Cantidad.value = '';
+        Ingreso_Categoria.value = '';
+        Ingreso_Detalle.value = '';
 
         // Agrega el elemento de alerta de error al cuerpo del documento
         document.body.appendChild(alertError);
@@ -99,12 +102,8 @@ addIngreso.addEventListener('click', () => {
          document.body.removeChild(alertElement);
      }, 3000); // 3000 milisegundos (3 segundos)
      
-     // Resta el balance
-     restarBalance();
-
     addBalance();
     Ingreso_Cantidad.value = '';
-    Ingreso_Categoria.value = '';
     Ingreso_Detalle.value = '';
 })
 
@@ -166,6 +165,9 @@ addEngreso.addEventListener('click', () => {
         alertError.className = 'alert alert-danger';
         alertError.role = 'alert';
         alertError.innerText = 'Ingresa un valor menor a $100,000 y mayor a $0';
+        Egreso_Cantidad.value = '';
+        Egreso_Detalle.value = '';
+
 
         // Agrega el elemento de alerta de error al cuerpo del documento
         document.body.appendChild(alertError);
@@ -211,7 +213,6 @@ addEngreso.addEventListener('click', () => {
 
     // Limpia los valores del formulario
     Egreso_Cantidad.value = '';
-    Egreso_Categoria.value = '';
     Egreso_Detalle.value = '';
 });
 

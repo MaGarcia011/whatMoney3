@@ -1,7 +1,18 @@
-.descripcion{
+.form-group{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    width: 40%; /* Limita el ancho al 50% de la pantalla */
+    margin:  auto; /* Centra el contenedor */
+}
+
+.form-group > * {
+    flex: 1; /* Esto asigna el mismo tamaño a todos los elementos dentro de .descripcion */
+    /* Puedes ajustar este tamaño según tus necesidades */
+    margin-top: 10px; 
+}
+
+p {
+    margin-left: 5%;
 }

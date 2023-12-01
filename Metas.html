@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/flatpickr.min.css">
     <link rel="stylesheet" href="css/metas.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.css">
 </head>
 
 <body>
@@ -73,11 +75,12 @@
             </div>
         </div>
     </nav>
-
+ 
     <div class="hero overlay text-white">
         <h1 class="heading text-white mb-3" data-aos="fade-up" style="margin-top: 100px; margin-left: 100px;">Crea nuevas metas:</h1>
+        <p  data-aos="fade-up">Crea una nueva meta para llevar el control de tus progresos.</p>
         <hr>
-    
+        
         <div class="button-container">
             <a href="Metas.html" class="action-button">Nueva meta</a>
             <a href="MetasModif.html"  class="action-button">Modificar</a>     
@@ -95,7 +98,7 @@
             </div>
             <div class="form-group">
                 <label for="fecha">Fecha:</label>
-                <input id="metafecha" type="date" id="fecha" name="fecha">
+                <input type="text" id="metafecha" placeholder="Selecciona una fecha:" data-input>
             </div>
             <div class="form-group">
                 <label for="categoria">Categoría:</label>
@@ -139,9 +142,12 @@
                 <label for="descripcion">Descripción:</label>
                 <textarea id="metadescrip" name="descripcion" rows="4"></textarea>
             </div>
-            <button id="btn-metaadd" class="save-button">Guardar</button>
+            <button id="btn-metaadd" class="save-button" style="display: none">Guardar</button>
         </form>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/tiny-slider.js"></script>

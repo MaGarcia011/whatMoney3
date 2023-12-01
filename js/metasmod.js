@@ -6,6 +6,19 @@ const textElemento = document.getElementById('metadescrip');
 const OptionElemento = document.getElementById('optionName');
 const btn = document.getElementById('btn-metaadd');
 
+let selectedDate;
+
+$("#metafecha").flatpickr({
+    enableTime: false,
+    dateFormat: "F, d Y H:i",
+    dateFormat: "Y/m/d",
+    minDate: "today",
+    maxDate: "30.12.2025",
+    onClose: (selectedtDates, dateStr, instance)=>{
+        selectedDate = $('#metafecha').val()
+    }
+});
+
 
 document.addEventListener('DOMContentLoaded', () => {
     if (!localStorage.getItem("token")) {
@@ -57,11 +70,79 @@ btn.addEventListener('click', () => {
     const meta_descrip = metadescrip.value
 
     console.log( meta_cant, meta_fecha,meta_categoria,meta_descrip);
+        
+        if (!meta_cant || !meta_fecha || !meta_categoria || !meta_descrip) {
+            // Si falta al menos un campo, muestra la alerta de error
+            const alertError = document.createElement('div');
+            alertError.className = 'alert alert-danger';
+            alertError.role = 'alert';
+            alertError.innerText = 'Por favor, completa todos los campos';
+    
+            // Agrega el elemento de alerta de error al cuerpo del documento
+            document.body.appendChild(alertError);
+    
+            // Aplica estilos para centrar la alerta de error
+            alertError.style.position = 'fixed';
+            alertError.style.top = '50%';
+            alertError.style.left = '50%';
+            alertError.style.transform = 'translate(-50%, -50%)';
+    
+            // Espera unos segundos y luego elimina la alerta de error
+            setTimeout(() => {
+                document.body.removeChild(alertError);
+            }, 4000); // 3000 milisegundos (3 segundos)
+    
+            return; // Detiene la ejecución de la función si faltan campos
+        }
+    
+        else if (meta_cant <0 || meta_cant > 100000) {
+            const alertError = document.createElement('div');
+            alertError.className = 'alert alert-danger';
+            alertError.role = 'alert';
+            alertError.innerText = 'Ingresa un valor menor a $100,000 y mayor a $0';
+            metaNombre.value = '';
+            metacant.value = '';
+            metafecha.value = '';
+            metacategoria.value = '';
+            metadescrip.value = '';
+    
+            // Agrega el elemento de alerta de error al cuerpo del documento
+            document.body.appendChild(alertError);
+    
+            // Aplica estilos para centrar la alerta de error
+            alertError.style.position = 'fixed';
+            alertError.style.top = '50%';
+            alertError.style.left = '50%';
+            alertError.style.transform = 'translate(-50%, -50%)';
+    
+            // Espera unos segundos y luego elimina la alerta de error
+            setTimeout(() => {
+                document.body.removeChild(alertError);
+            }, 40000); // 3000 milisegundos (3 segundos)
+    
+            return; // Detiene la ejecución de la función si faltan campos
+        }
+        
 
-    if (!meta_cant && !meta_fecha && !meta_categoria && !meta_descrip) {
-        return alert('Todos los campos son obligatorios');
-    }
-    alert('Meta mmodificada correctamente');
+        const alertElement1 = document.createElement('div');
+        alertElement1.className = 'alert alert-success';
+        alertElement1.role = 'alert';
+        alertElement1.innerText = 'Meta agregada correctamente';
+    
+         // Agrega el elemento de alerta al cuerpo del documento
+        document.body.appendChild(alertElement1);
+    
+         // Aplica estilos para centrar la alerta
+        alertElement1.style.position = 'fixed';
+        alertElement1.style.top = '50%';
+        alertElement1.style.left = '50%';
+        alertElement1.style.transform = 'translate(-50%, -50%)';
+        
+        setTimeout(() => {
+            document.body.removeChild(alertElement1);
+         }, 60000000); // 3000 milisegundos (3 segundos)
+
+
     addmetabd();
     metacant.value = '';
     metafecha.value = '';
